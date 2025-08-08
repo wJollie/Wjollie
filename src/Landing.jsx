@@ -5,16 +5,18 @@ import "./index.css";
 
 function HomePage() {
   return (
-    <main className="container home">
+    <main className="home">
       <section className="hero">
-        <h1>William Jollie</h1>
-        <p className="tagline">Aspiring Computer Engineer • Builder • Problem Solver</p>
-        <p className="intro">
-          I’m a self-taught aspiring engineer with hands-on experience in systems design, electronics,
-          and full-stack development. This portfolio showcases real-world projects built with
-          creativity, discipline, and minimal resources.
-        </p>
-        <Link to="/projects" className="btn">View My Projects</Link>
+        <div className="container">
+          <h1>William Jollie</h1>
+          <p className="tagline">Aspiring Computer Engineer • Builder • Problem Solver</p>
+          <p className="intro">
+            I’m a self-taught aspiring engineer with hands-on experience in systems design,
+            electronics, and full-stack development. This portfolio showcases real-world
+            projects built with creativity, discipline, and minimal resources.
+          </p>
+          <Link to="/projects" className="btn">View My Projects</Link>
+        </div>
       </section>
     </main>
   );
