@@ -15,7 +15,15 @@ function HomePage() {
             electronics, and full-stack development. This portfolio showcases real-world
             projects built with creativity, discipline, and minimal resources.
           </p>
-          <Link to="/projects" className="btn">View My Projects</Link>
+          <Link to="/projects" className="Btn-Container">
+  <div className="text">View Projects</div>
+  <div className="icon-Container">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+      <path d="M10 17l5-5-5-5v10z"/>
+    </svg>
+  </div>
+</Link>
+
         </div>
       </section>
     </main>
