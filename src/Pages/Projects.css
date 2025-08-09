@@ -1,0 +1,96 @@
+/* Uses your existing CSS variables from Home.css :root */
+.projects-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  margin-top: 16px;
+}
+
+.project-card {
+  background: rgba(13,13,15,.75);
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(0,0,0,.35);
+}
+
+.project-body { padding: 14px 14px 16px; }
+
+.project-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 10px; margin-bottom: 6px;
+}
+
+.project-title { margin: 0; font-size: 1.1rem; }
+.period { color: var(--muted); font-size: .9rem; }
+
+.summary { color: #dfe3ef; margin: 6px 0 10px; line-height: 1.6; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+.badge {
+  background: #17181b;
+  color: #cfd2e0;
+  border: 1px solid rgba(110,134,255,.25);
+  padding: 6px 8px;
+  border-radius: 10px;
+  font-size: .82rem;
+}
+
+/* Links */
+.links { display: flex; flex-wrap: wrap; gap: 10px; }
+.link-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(29,33,41,.9);
+  color: var(--text);
+  border: 1px solid rgba(110,134,255,.2);
+  box-shadow: 0 5px 20px rgba(79,124,255,.2);
+  transition: transform .18s ease, box-shadow .18s ease, color .2s ease;
+}
+.link-btn:hover {
+  transform: translateY(-1px);
+  color: #fff;
+  box-shadow: 0 10px 28px rgba(79,124,255,.35);
+}
+
+/* Carousel (no-lib, scroll-snap) */
+.carousel {
+  position: relative;
+  background: #0f1115;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+.carousel-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+.slide {
+  scroll-snap-align: start;
+  margin: 0;
+  aspect-ratio: 16 / 9;
+  display: grid; place-items: center;
+  background: #0c0e12;
+}
+.slide img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+
+/* Dots */
+.dots {
+  display: flex; gap: 8px; justify-content: center;
+  padding: 8px 0 10px;
+}
+.dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #2a2d36;
+  outline: none;
+  border: 1px solid rgba(110,134,255,.25);
+}
+.dot:hover { background: var(--accent); }
+
+/* Page headings match hero style already */
