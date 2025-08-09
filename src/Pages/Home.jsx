@@ -34,15 +34,22 @@ export default function App() {
   return (
     <BrowserRouter>
       <header className="navbar">
-        <div className="logo">William Jollie</div>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/projects">Projects</Link>
-          <Link to="/about">About</Link>
-          <Link to="/resume">Resume</Link>
-          <Link to="/contact">Contact</Link>
-        </nav>
-      </header>
+  <Link to="/" className="brand" aria-label="Home">
+    <span className="brand-slot">
+      <img src="/Assets/WJBULL-Cutout.png" alt="WJ bull logo" className="brand-icon" />
+    </span>
+    <span className="brand-text">William Jollie</span>
+  </Link>
+
+  <nav>
+    <Link to="/">Home</Link>
+    <Link to="/projects">Projects</Link>
+    <Link to="/about">About</Link>
+    <Link to="/resume">Resume</Link>
+    <Link to="/contact">Contact</Link>
+  </nav>
+</header>
+
 
       <Routes>
         <Route path="/" element={<HomePage />} />
