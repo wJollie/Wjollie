@@ -7,7 +7,7 @@ export default function Resume() {
       <section className="hero">
         <div className="container resume-wrap">
           <h1>Resume</h1>
-          <p className="intro">One-page resume. Download full resume PDF with the button below.</p>
+          <p className="intro">One-page resume. Download resume PDF with the button below.</p>
 
           <a
   href="public\Assets\William_Jollie_Resume8-9-25.pdf"
