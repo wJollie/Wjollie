@@ -166,15 +166,38 @@ a:hover{ color:var(--accent); }
   text-shadow:0 1px 3px rgba(0,0,0,.7);
 }
 
-/* =========================================================
-   Responsive
-   ========================================================= */
-@media (max-width:720px){
-  .navbar{ padding:12px 14px; }
-  .navbar nav{ gap:8px; }
-  :root{
-    --brand-logo-h: 84px;   /* slightly smaller on mobile */
-    --brand-slot-w: 46px;
+/* ======= MOBILE FIX: Landing (≤ 700px) ======= */
+@media (max-width:700px){
+  /* Don’t use the full‑bleed trick on phones */
+  .home .hero{
+    width:100%;
+    margin-left:0;
+    min-height:calc(100svh - var(--nav-h)); /* safer on iOS */
+    padding:56px 0 28px;
+    background: url("/Assets/cornered-stairs.svg") center/cover no-repeat;
   }
-  .home .hero{ padding:56px 0 36px; }
+  .home .hero::before{ background: rgba(0,0,0,.62); } /* more contrast */
+
+  /* Readability */
+  .home .hero .container{ max-width: 560px; padding: 0 16px; }
+  .home .hero h1{ font-size:26px; letter-spacing:.2px; }
+  .tagline{ font-size:14px; }
+  .intro{ font-size:15px; line-height:1.7; max-width: 42ch; }
+
+  /* CTA tap target */
+  .Btn-Container{ width:240px; border-radius:46px; }
+  .icon-Container{ width:50px; height:50px; }
+
+  /* Make the nav not feel crammed without changing desktop */
+  .navbar{ padding:10px 12px; }
+  .navbar nav{
+    flex-wrap: wrap;
+    gap: 6px 10px;
+  }
+  .navbar nav a{
+    padding:10px 12px;
+    border-radius:12px;
+    font-size:.98rem;
+  }
 }
+

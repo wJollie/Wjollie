@@ -211,3 +211,43 @@
 
 /* Carousel still fits */
 .project-card .slide{ aspect-ratio: 16/9; }
+
+/* ======= MOBILE FIX: Projects (≤ 840px) ======= */
+@media (max-width:840px){
+  .projects-page .hero .container{
+    max-width: 96vw !important;
+    padding: 0 12px;
+  }
+
+  /* Use grid so cards are centered and never odd-stacked */
+  .projects-grid{
+    display:grid !important;
+    grid-template-columns: 1fr;   /* one per row */
+    justify-items:center;
+    gap:16px;
+  }
+
+  .project-card{
+    width:min(560px, 100%);
+    margin:0 auto;
+    background: rgba(13,13,15,.88);
+    border-radius:14px;
+    box-shadow: 0 12px 28px rgba(0,0,0,.45);
+  }
+
+  /* Less-tall images on phones */
+  .project-card .slide{ aspect-ratio: 4/3; }
+  .project-title{ font-size:1.05rem; }
+  .summary{ font-size:.98rem; line-height:1.65; }
+
+  /* Bigger tap targets */
+  .badge{ padding:8px 10px; border-radius:12px; }
+  .link-btn{ padding:12px 14px; border-radius:12px; min-height:44px; }
+}
+
+/* Ultra-narrow devices */
+@media (max-width:380px){
+  .project-card .slide{ aspect-ratio: 1/1; }
+  .link-btn{ font-size:.95rem; }
+}
+
