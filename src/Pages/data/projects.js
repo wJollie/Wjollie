@@ -3,12 +3,12 @@ export const projects = [
   {
     id: "home-server",
     title: "Home Server / NAS Cart",
-    period: "2025",
-    repo: "https://github.com/wJollie/home-server",
+    period: "August 2025",
+    repo: "https://github.com/wJollie/home-server-nas-cart",
     summary:
-      "32TB TrueNAS SCALE box for media, backup, and game hosting. Portable cart, airflow mods, and remote monitoring.",
+      "32TB TrueNAS SCALE server for media, backup, and game hosting. Portable cart, airflow mods, and remote monitoring.",
     software: ["TrueNAS SCALE", "Docker", "Grafana", "Rust", "React"],
-    hardware: ["Ryzen 5 3600", "4 8TB HDD", "1660 super", "APC UPS"],
+    hardware: ["Ryzen 5 2600", "4 8TB HDD", "1660 super"],
     images: [
       "/Project-Images/Home-Server/Desktop.jpg",
       "/Project-Images/Home-Server/Cable Back.jpg",
@@ -18,10 +18,7 @@ export const projects = [
       "/Project-Images/Home-Server/PC Back.jpg",
       "/Project-Images/Home-Server/Top.jpg",
     ],
-    links: [
-      { label: "Build Log", url: "https://…" },
-      { label: "Live Dashboard", url: "https://…" },
-    ],
+    links: [],
   },
 
   // Add more projects below by copy/paste:

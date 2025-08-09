@@ -81,7 +81,7 @@ function ProjectCard({
         <div className="links">
           {repo && (
             <a href={repo} target="_blank" rel="noreferrer" className="link-btn">
-              <span>GitHub</span>
+              <span>GitHub Repo</span>
             </a>
           )}
           {links.map((l) => (
