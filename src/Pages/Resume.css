@@ -1,0 +1,177 @@
+/* Reuses your hero look; this file focuses on the document + print */
+
+/* Page heading */
+.resume-wrap h1 {
+  font-size: clamp(28px, 5vw, 44px);
+  margin: 0 0 6px;
+  text-shadow: 0 1px 3px rgba(0,0,0,.7);
+}
+.resume-download { margin: 10px 0 16px; }
+
+/* ===== Resume sheet (screen) ===== */
+#resume-doc{
+  background: #0f1115;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.35);
+  padding: 20px clamp(16px, 3vw, 28px);
+  max-width: 860px;
+  color: #e9eaf1;
+  text-align: left;
+}
+
+/* Header bar */
+#resume-doc .r-head{
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 16px; padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,.08);
+}
+#resume-doc h2{ margin: 0 0 2px; font-size: clamp(22px, 3.5vw, 28px); }
+#resume-doc .r-sub{ margin: 0; color: #bfc4d6; }
+
+#resume-doc .r-contact{
+  margin: 0; padding: 0; list-style: none;
+  display: grid; gap: 4px; font-size: 14px; text-align: right;
+}
+#resume-doc .r-contact a{ color: #cdd3e8; }
+#resume-doc .r-contact a:hover{ color: var(--accent); }
+
+/* Sections */
+#resume-doc section{ margin-top: 14px; }
+#resume-doc h3{
+  margin: 10px 0 6px; font-size: 16px; letter-spacing: .3px; text-transform: uppercase;
+  color: #cfd3e2;
+}
+
+/* Items */
+.r-item{ margin-bottom: 10px; }
+.r-item-head{
+  display:flex; justify-content:space-between; align-items:baseline; gap:12px;
+}
+.r-item-head strong{ font-size: 15px; }
+.r-item-head span{ color:#aeb4c7; font-size: 13px; }
+.r-item ul{ margin: 6px 0 6px 18px; }
+.r-item li{ margin: 2px 0; }
+.r-tech{ color:#9fb0ff; font-size:13px; }
+
+/* Two-column footer grid */
+.r-grid{
+  display:grid; grid-template-columns: 1fr 1fr; gap:16px;
+}
+
+/* ===== Print to PDF ===== */
+@media print {
+  /* Page size + margins (Letter; switch to A4 if preferred) */
+  @page {
+    size: Letter;
+    margin: 0.5in;
+  }
+
+  /* Hide everything except the resume doc */
+  body * { visibility: hidden; }
+  #resume-doc, #resume-doc * { visibility: visible; }
+  #resume-doc {
+    position: absolute; left: 0; top: 0;
+    width: auto; max-width: none; box-shadow: none; border-radius: 0; border: 0;
+    background: #ffffff; color: #111;
+    padding: 0;
+  }
+
+  #resume-doc .r-head { border-color: #ddd; }
+  #resume-doc .r-contact a { color: #000; text-decoration: none; }
+
+  /* Tidy typographic scale for print */
+  #resume-doc h2 { font-size: 18pt; }
+  #resume-doc h3 { font-size: 11pt; }
+  #resume-doc, #resume-doc p, #resume-doc li { font-size: 10pt; line-height: 1.35; }
+  .r-item-head strong { font-size: 10.5pt; }
+  .r-item-head span { font-size: 9.5pt; color: #444; }
+  .r-tech { color: #2f55cc; }
+  .r-grid { grid-template-columns: 1fr 1fr; gap: 12pt; }
+
+  /* Hide the site chrome in print (in case visibility is overridden) */
+  .navbar, .Btn-Container, .resume-download, .hero::before { display: none !important; }
+}
+
+
+/* === Resume download icon (Uiverse-inspired, themed to site) === */
+.resume-download { position: relative; }
+
+/* icon wrapper (same size as your old circle) */
+.dl-icon{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px; height: 45px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  box-shadow: inset 0 0 0 3px rgba(29,33,41,.9);
+}
+
+/* arrow svg */
+.dl-svg{
+  width: 18px; height: 18px;
+  fill: #ffffff;                     /* matches your scheme */
+  transition: transform .3s ease, opacity .3s ease;
+}
+
+/* little bar under the arrow */
+.dl-bar{
+  position: absolute;
+  bottom: 8px;
+  width: 18px; height: 5px;
+  border-bottom: 2px solid #e9e9f5;
+  border-left: 2px solid #e9e9f5;
+  border-right: 2px solid #e9e9f5;
+  opacity: .9;
+  transition: border-color .3s ease;
+}
+
+/* tooltip */
+.dl-tooltip{
+  position: absolute;
+  right: -105px;                     /* keep same as Uiverse */
+  opacity: 0;
+  background-color: rgb(12,12,12);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex; align-items: center; justify-content: center;
+  transition: opacity .2s ease;
+  pointer-events: none;
+  letter-spacing: .5px;
+  white-space: nowrap;
+}
+.dl-tooltip::before{
+  content:"";
+  position: absolute;
+  width:10px; height:10px;
+  background-color: rgb(12,12,12);
+  transform: rotate(45deg);
+  left: -5%;
+}
+
+/* hover animations (triggered by the whole CTA) */
+.resume-download:hover .dl-tooltip{ opacity: 1; }
+@keyframes slide-in-top{
+  0%{ transform: translateY(-10px); opacity: 0; }
+  100%{ transform: translateY(0); opacity: 1; }
+}
+.resume-download:hover .dl-svg{
+  animation: slide-in-top .6s cubic-bezier(.25,.46,.45,.94) both;
+}
+.resume-download:hover .dl-bar{
+  border-bottom-color:#fff;
+  border-left-color:#fff;
+  border-right-color:#fff;
+}
+
+
+/* screen vs print toggles */
+.hide-print { display: block; }
+.show-print { display: none; }
+
+@media print {
+  .hide-print { display: none !important; }
+  .show-print { display: block !important; }
+}
