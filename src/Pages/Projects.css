@@ -1,18 +1,26 @@
 /* Uses your existing CSS variables from Home.css :root */
+/* Container centers cards no matter how many */
 .projects-grid {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;   /* center rows */
+  align-items: stretch;
   gap: 18px;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  margin-top: 16px;
+  max-width: 1600px;         /* optional: widen the area */
+  margin: 16px auto;         /* center the container */
+  padding: 20px;
 }
 
+/* Give cards a predictable width so wrapping is clean */
 .project-card {
+  width: clamp(300px, 32vw, 360px);  /* grows on big screens, never too wide */
   background: rgba(13,13,15,.75);
   border: 1px solid rgba(255,255,255,.06);
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 10px 28px rgba(0,0,0,.35);
 }
+
 
 .project-body { padding: 14px 14px 16px; }
 
