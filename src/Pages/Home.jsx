@@ -3,6 +3,7 @@
 import { BrowserRouter, Routes, Route, Navigate, Link } from "react-router-dom";
 import "./Home.css";
 import Contact from "./Contact";
+import Resume from "./Resume";
 
 function HomePage() {
   return (
@@ -54,7 +55,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/projects" element={<p>Projects Page (coming soon)</p>} />
-        <Route path="/resume" element={<p>Resume Page (coming soon)</p>} />
+        <Route path="/resume" element={<Resume/>} />
         <Route path="/contact" element={<Contact/>}/>
         <Route path="*" element={<p style={{ padding: 24 }}>Page Not Found</p>} />
       </Routes>
