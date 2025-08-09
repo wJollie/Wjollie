@@ -167,7 +167,7 @@ a:hover   { color: var(--accent); }
   min-height: calc(100dvh - var(--nav-h));
 
   /* background image (file in /public) */
-  background: url("/cornered-stairs.svg") center/cover no-repeat;
+  background: url("Assets/cornered-stairs.svg") center/cover no-repeat;
 
   /* layout + centering */
   display: flex; align-items: center; justify-content: center;

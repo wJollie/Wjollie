@@ -1,7 +1,7 @@
 // App.jsx - Main App with Navigation and Landing Page
 
 import { BrowserRouter, Routes, Route, Navigate, Link } from "react-router-dom";
-import "./index.css";
+import "./Home.css";
 
 function HomePage() {
   return (
