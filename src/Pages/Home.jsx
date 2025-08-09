@@ -2,6 +2,7 @@
 
 import { BrowserRouter, Routes, Route, Navigate, Link } from "react-router-dom";
 import "./Home.css";
+import Contact from "./Contact";
 
 function HomePage() {
   return (
@@ -44,7 +45,6 @@ export default function App() {
   <nav>
     <Link to="/">Home</Link>
     <Link to="/projects">Projects</Link>
-    <Link to="/about">About</Link>
     <Link to="/resume">Resume</Link>
     <Link to="/contact">Contact</Link>
   </nav>
@@ -54,9 +54,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/projects" element={<p>Projects Page (coming soon)</p>} />
-        <Route path="/about" element={<p>About Page (coming soon)</p>} />
         <Route path="/resume" element={<p>Resume Page (coming soon)</p>} />
-        <Route path="/contact" element={<p>Contact Page (coming soon)</p>} />
+        <Route path="/contact" element={<Contact/>}/>
         <Route path="*" element={<p style={{ padding: 24 }}>Page Not Found</p>} />
       </Routes>
     </BrowserRouter>
