@@ -6,6 +6,8 @@ function Badge({ children }) {
   return <span className="badge">{children}</span>;
 }
 
+
+
 function ImageCarousel({ images, alt }) {
   if (!images?.length) return null;
   return (
@@ -95,19 +97,18 @@ function ProjectCard({
 
 export default function Projects() {
   return (
-    <main className="home">
+    <main className="home projects-page">
       <section className="hero">
-        <div className="container">
+        <div className="container projects-container">
           <h1>Projects</h1>
           <p className="intro">A growing set of hardware + software builds. Click through images; repos linked.</p>
 
           <div className="projects-grid">
-            {projects.map((p) => (
-              <ProjectCard key={p.id} {...p} />
-            ))}
+            {projects.map((p) => (<ProjectCard key={p.id} {...p} />))}
           </div>
         </div>
       </section>
     </main>
   );
 }
+
