@@ -1,7 +1,6 @@
 // App.jsx - Main App with Navigation and Landing Page
 
 import { BrowserRouter, Routes, Route, Navigate, Link } from "react-router-dom";
-import { useState } from "react";
 import "./Home.css";
 import Contact from "./Contact";
 import Resume from "./Resume";
