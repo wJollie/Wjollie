@@ -199,5 +199,38 @@ a:hover{ color:var(--accent); }
     border-radius:12px;
     font-size:.98rem;
   }
+  .navbar .logo img {
+    content: url("/public/Assets/WJBULL-Cutout-Name.png"); /* replace with your actual path */
+    height: 42px;  /* adjust so it fits navbar nicely */
+    width: auto;
+  }
+  .navbar .logo-text {
+    display: none !important;
+}
+
+}
+
+/* Mobile logo swap + layout */
+@media (max-width:700px){
+  /* Use the full-name PNG from <picture>, so no overhang */
+  .brand-slot {
+    position: static;
+    width: auto;
+    height: var(--nav-h);
+    display: flex;
+    align-items: center;
+  }
+  .brand-slot img.brand-icon {
+    position: static;
+    transform: none;
+    height: 125px;         /* adjust to taste */
+    width: auto;
+  }
+
+  /* Hide separate text when the PNG-with-name is used */
+  .brand-text { display: none !important; }
+
+  /* tighten spacing a bit on small screens */
+  .brand { gap: 10px; }
 }
 
