@@ -39,9 +39,16 @@ export default function App() {
     <BrowserRouter>
       <header className="navbar">
   <Link to="/" className="brand" aria-label="Home">
-    <span className="brand-slot">
-      <img src="/Assets/WJBULL-Cutout.png" alt="WJ bull logo" className="brand-icon" />
-    </span>
+    <picture className="brand-slot">
+      {/* On mobile, use the full-name PNG */}
+      <source media="(max-width:700px)" srcSet="/Assets/WJBULL-Cutout-Name.png" />
+      {/* Default (desktop): icon-only mark that overhangs */}
+      <img
+        src="/Assets/WJBULL-Cutout.png"
+        alt="WJ bull logo"
+        className="brand-icon"
+      />
+    </picture>
     <span className="brand-text">William Jollie</span>
   </Link>
 
@@ -52,6 +59,7 @@ export default function App() {
     <Link to="/contact">Contact</Link>
   </nav>
 </header>
+
 
 
       <Routes>
