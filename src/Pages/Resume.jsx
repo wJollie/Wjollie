@@ -10,7 +10,7 @@ export default function Resume() {
           <p className="intro">One-page resume. Download resume PDF with the button below.</p>
 
           <a
-  href="public\Assets\William_Jollie_Resume8-9-25.pdf"
+  href="/resume.pdf"
   download="William-Jollie-Resume.pdf"
   className="Btn-Container resume-download"
 >
