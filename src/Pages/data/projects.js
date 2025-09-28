@@ -20,6 +20,37 @@ export const projects = [
     ],
     links: [],
   },
+  {
+    id: "green-lantern-battery",
+    title: "Green lantern Battery",
+    period: "September 2025",
+    repo: "https://github.com/wJollie/green-lantern-battery",
+    summary:
+      "Green lantern power battery that detects when a ring is inside and plays an animation with sound",
+    software: ["Arduino"],
+    hardware: [
+      "Arduino nano",
+      "RC522",
+      "RFplayer mini",
+      "LED Strip",
+      "Mini Speaker",
+    ],
+    images: [
+      "/Project-Images/Green-Lantern-Battery/1.jpg",
+      "/Project-Images/Green-Lantern-Battery/2.jpg",
+      "/Project-Images/Green-Lantern-Battery/3.jpg",
+      "/Project-Images/Green-Lantern-Battery/4.jpg",
+      "/Project-Images/Green-Lantern-Battery/5.jpg",
+      "/Project-Images/Green-Lantern-Battery/6.jpg",
+      "/Project-Images/Green-Lantern-Battery/7.jpg",
+    ],
+    links: [
+      {
+        label: "Demo Video",
+        url: "https://www.youtube.com/watch?v=GqTXzMdnqlU",
+      },
+    ],
+  },
 
   // Add more projects below by copy/paste:
   // {
