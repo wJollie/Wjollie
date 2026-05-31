@@ -12,12 +12,12 @@ function HomePage() {
       <section className="hero">
         <div className="container">
           <h1>William Jollie</h1>
-          <p className="tagline">Aspiring Computer Engineer • Builder • Problem Solver</p>
-          <p className="intro">
-            I’m a self-taught aspiring engineer with hands-on experience in systems design,
-            electronics, and full-stack development. This portfolio showcases real-world
-            projects built with creativity, discipline, and minimal resources.
-          </p>
+    <p className="tagline">Computer Engineering Student • Systems • Hardware • Full‑Stack</p>
+    <p className="intro">
+      Computer Engineering student at Lafayette College with hands‑on experience in systems design,
+      embedded development, and full‑stack engineering. I build practical, resource‑efficient
+      hardware and software projects that solve real problems and push my technical range.
+    </p>
           <Link to="/projects" className="Btn-Container">
   <div className="text">View Projects</div>
   <div className="icon-Container">

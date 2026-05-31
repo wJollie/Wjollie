@@ -36,6 +36,7 @@ export default function Resume() {
               </div>
               <ul className="r-contact">
                 <li><a href="mailto:william.jollie23@gmail.com">william.jollie23@gmail.com</a></li>
+                <li><a href="mailto:jolliew@lafayette.edu">jolliew@lafayette.edu</a></li>
                 <li><a href="tel:+15512060336">+1 (555) 206‑0336</a></li>
                 <li><a href="https://github.com/wJollie" target="_blank" rel="noreferrer">Github</a></li>
                 <li><a href="https://www.linkedin.com/in/william-jollie-68a4b7236/" target="_blank" rel="noreferrer">Linkedin</a></li>
@@ -94,8 +95,9 @@ export default function Resume() {
               <div>
                 <h3>Education</h3>
                 <li>Upenn Web Development Bootcamp</li>
-                <li>Udemy and Bergen Online Courses</li>
-                <li>Homeschooled</li>
+                <li>Self Taught Courses</li>
+                <h4>In Progress</h4>
+                <li>B.S. in Computer Engineering Lafayette College Graduate: 2030</li>
               </div>
             </section>
           </article>

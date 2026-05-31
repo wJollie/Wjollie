@@ -100,12 +100,14 @@ export default function Projects() {
     <main className="home projects-page">
       <section className="hero">
         <div className="container projects-container">
-          <h1>Projects</h1>
+          <h1>Personal Projects</h1>
           <p className="intro">A growing set of hardware + software builds. Click through images; repos linked.</p>
 
           <div className="projects-grid">
             {projects.map((p) => (<ProjectCard key={p.id} {...p} />))}
           </div>
+          <h1>Class Projects</h1>
+          <p className="intro">Projects completed as part of my coursework.</p>
         </div>
       </section>
     </main>

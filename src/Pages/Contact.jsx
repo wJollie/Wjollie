@@ -40,8 +40,8 @@ function ContactButton({ href, icon, label, sublabel, external = true }) {
 }
 
 export default function Contact() {
-  // TODO: replace with your real handles
   const email = "william.jollie23@gmail.com";
+  const schoolEmail="jolliew@lafayette.edu";
   const phone = "+1-551-206-0336";
   const links = [
     {
@@ -82,6 +82,16 @@ export default function Contact() {
                 external={false}
               />
               <CopyChip value={email} label="Copy email" />
+            </div>
+            <div className="contact-row">
+              <ContactButton
+                href={`mailto:${schoolEmail}?subject=Portfolio Inquiry&body=Hi William,%0D%0A%0D%0A`}
+                label="School Email"
+                sublabel={schoolEmail}
+                icon={`<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6Zm2 .5v.4l8 5.1 8-5.1v-.4H4Zm16 2.6-8 5.1-8-5.1V18h16V9.1Z"/></svg>`}
+                external={false}
+              />
+              <CopyChip value={schoolEmail} label="Copy email" />
             </div>
 
             {/* Phone */}
